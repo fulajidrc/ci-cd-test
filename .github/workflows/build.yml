@@ -26,17 +26,17 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist/ci-cd-test-app
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: dist/ci-cd-test-app
       - name: Pushes test file
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: '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'
+        uses: GuillaumeFalourd/copy-push-files@v1
         with:
-          source_file: 'README.md'
-          destination_repo: 'fulajidrc/ci-cd-test-copy'
-          user_email: 'fulaji.thakor@drcsystems.com'
-          user_name: 'fulajidrc'
+          email: fulaji.thakor@drcsystems.com
+          name: fulajidrc
+          source_files: README.md
+          target_branch: main
+          remote_repository: https://fulajidrc@github.com/fulajidrc/ci-cd-test-copy
+          access_token: ${{secrets.API_TOKEN}}
           commit_message: 'A custom message for the commit'
           
