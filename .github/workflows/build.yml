@@ -36,7 +36,7 @@ jobs:
           name: fulajidrc
           source_files: README.md
           target_branch: main
-          remote_repository: https://fulajidrc@github.com/fulajidrc/ci-cd-test-copy
+          remote_repository: https://fulajidrc:${{secrets.API_TOKEN}}@github.com/fulajidrc/ci-cd-test-copy
           access_token: ${{secrets.API_TOKEN}}
           commit_message: 'A custom message for the commit'
           
