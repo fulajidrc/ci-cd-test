@@ -36,6 +36,6 @@ jobs:
         with:
           source_file: 'README.md'
           destination_repo: 'fulajidrc/ci-cd-test-copy'
-          user_email: 'fulaji.thakor@drcsystems.com'
+          user_email: 'fulaji.thakor@drcsystems.com' 
           user_name: 'fulajidrc'
           commit_message: 'A custom message for the commit'
