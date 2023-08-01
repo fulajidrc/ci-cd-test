@@ -34,6 +34,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: '${{ secrets.GITHUB_TOKEN }}' 
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           source_file: 'README.md'
           destination_repo: 'fulajidrc/ci-cd-test-copy'
           user_email: 'fulaji.thakor@drcsystems.com' 
