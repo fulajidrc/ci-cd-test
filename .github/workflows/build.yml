@@ -30,13 +30,12 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist/ci-cd-test-app
       - name: Pushes test file
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: '${{ secrets.GITHUB_TOKEN }}' 
+        uses: GuillaumeFalourd/copy-push-files@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          source_file: 'README.md'
-          destination_repo: 'fulajidrc/ci-cd-test-copy'
-          user_email: 'fulaji.thakor@drcsystems.com' 
-          user_name: 'fulajidrc'
+          email: ${{ github.actor }}[bot]@users.noreply.github.com
+          name: ${{ github.actor }}
+          source_files: 'README.md'
+          target_branch: "main"
+          remote_repository: https://github.com/fulajidrc/ci-cd-test-copy
+          access_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: 'A custom message for the commit'
