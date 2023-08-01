@@ -32,11 +32,7 @@ jobs:
       - name: Pushes test file
         uses: GuillaumeFalourd/copy-push-files@v1
         with:
-          email: "fulaji.thakor@drcsystems.com"
-          name: "fulajidrc"
-          commit_message: 'A custom message for the commit'
-          target_branch: "main"
-          source_files: 'README.md'
+          source_files: "README.md"
           remote_repository: "https://fulajidrc@github.com/fulajidrc/ci-cd-test-copy"
           access_token: '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'
           
